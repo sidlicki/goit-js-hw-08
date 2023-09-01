@@ -29,6 +29,16 @@ if (savedValues) {
 form.addEventListener('submit', function (evt) {
   evt.preventDefault();
 
+  // перевірка чи поле емейл не є пустим (аналог реквайреда в хтмл, тільки виводить алерт)
+  if (email.value.trim() === '') {
+    alert('Заповніть поле Email для відправки повідомлення');
+    return;
+  }
+  if (message.value.trim() === '') {
+    alert('Для відправлення повідомлення, спочатку потрібно його написати 😊');
+    return;
+  }
+
   const sentValues = {
     userEmail: email.value,
     userMessage: message.value,

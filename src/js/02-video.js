@@ -15,7 +15,9 @@ player.on(
   }, 1000)
 );
 
-const time = parseFloat(localStorage.getItem('videoplayer-current-time'));
+const time =
+  parseFloat(localStorage.getItem('videoplayer-current-time')) || '0';
+
 player.setCurrentTime(time);
 
 console.dir(time);
